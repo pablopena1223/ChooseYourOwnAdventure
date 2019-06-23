@@ -123,7 +123,7 @@ a:focus {
   height: 100%;
   padding: 100px 0;
   text-align: center;
-  color: white;
+  color: red; 
   background-position-x: center;
   background-position-y: bottom;
   background-size: cover;

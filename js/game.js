@@ -1,38 +1,41 @@
 // NOTE - You must have a level with the name "start".  This is used as the first level in the game.
 
 var game = {
-    music: "98_Lost_Mine.mp3",
-    background_image: "intro-bg.jpg",
+    
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            background_image:"freinds.jpg",
+            message: "Your friends invite you to explore an abandonded buiding",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Go with them",
+                    nextLevel: "building",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Go home",
+                    nextLevel: "home",
                 },
             ]
         },
 
-        cave: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+        building: {
+            message: "You get to the building, it says 'WARNING DO NOT ENTER!'",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Ignore it and go inside",
+                    nextLevel: "Inside_building",
                 },
+                
+                {
+                    text: "Listen to the sign and go home",
+                    nextLevel: "home",
+                }
             ]
         },
 
-        field: {
+        home: {
             message: "Some adventurer you are...",
             choices: [
                 {
@@ -42,5 +45,20 @@ var game = {
             ]
         },
 
+        Inside_building: {
+            message: "You're now inside the bulding, you have two paths",
+            choices: [
+                {
+                    text: "Go Left",
+                    nextLevel: "Left",
+                },
+                
+                {
+                    text: "Go Right",
+                    nextLevel: "Right",
+                }
+            ]
+        },
+        
     }
 };
